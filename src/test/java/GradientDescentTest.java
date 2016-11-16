@@ -20,8 +20,8 @@ public class GradientDescentTest {
 		GradientDescent gradientDescent = new GradientDescent(costFunction);
 		gradientDescent.train(0.1);
 		System.out.println("f(x) = " + gradientDescent.getTheta0() + " + " + gradientDescent.getTheta1() + "x");
-		assertEquals(0.0, gradientDescent.getTheta0(), 1E-9);
-		assertEquals(1.0, gradientDescent.getTheta1(), 1E-9);
+		assertEquals(0.0, gradientDescent.getTheta0(), 1E-6);
+		assertEquals(1.0, gradientDescent.getTheta1(), 1E-6);
 	}
 	
 	@Test
@@ -41,10 +41,10 @@ public class GradientDescentTest {
 		
 		CostFunction costFunction = new CostFunction(trainingSet);
 		GradientDescent gradientDescent = new GradientDescent(costFunction);
-		gradientDescent.train(0.0001);
+		gradientDescent.train(0.01);
 		System.out.println("f(x) = " + gradientDescent.getTheta0() + " + " + gradientDescent.getTheta1() + "x");
-		assertEquals(0.0, gradientDescent.getTheta0(), 1E-9);
-		assertEquals(1.0, gradientDescent.getTheta1(), 1E-9);
+		assertEquals(0.0, gradientDescent.getTheta0(), 1E-6);
+		assertEquals(1.0, gradientDescent.getTheta1(), 1E-6);
 	}
 	
 	@Test
@@ -56,10 +56,10 @@ public class GradientDescentTest {
 		
 		CostFunction costFunction = new CostFunction(trainingSet.toArray(new TrainingSetOneVariable[trainingSet.size()]));
 		GradientDescent gradientDescent = new GradientDescent(costFunction);
-		gradientDescent.train();
+		gradientDescent.train(0.000005);
 		System.out.println("f(x) = " + gradientDescent.getTheta0() + " + " + gradientDescent.getTheta1() + "x");
-		assertEquals(0.0, gradientDescent.getTheta0(), 1E-9);
-		assertEquals(1.0, gradientDescent.getTheta1(), 1E-9);
+		assertEquals(0.0, gradientDescent.getTheta0(), 1E-4);
+		assertEquals(1.0, gradientDescent.getTheta1(), 1E-4);
 	}
 	
 

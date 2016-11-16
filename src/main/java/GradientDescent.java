@@ -2,7 +2,6 @@
 public class GradientDescent {
 	private CostFunction costFunction;
 	private double threshold = 1E-11;
-	private double learningRate = 0.000001;
 	
 	private double theta0;
 	private double theta1;
@@ -19,7 +18,7 @@ public class GradientDescent {
 		return theta1;
 	}
 	
-	public void train() {
+	public void train(double learningRate) {
 		double theta0old = 0;
 		double theta1old = 0;
 		double theta0new = 0;

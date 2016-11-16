@@ -6,8 +6,8 @@ public class CostFunctionTest {
 
 	@Test
 	public void testExactFit() {
-		float theta0 = 0;
-		float theta1 = 1;
+		double theta0 = 0;
+		double theta1 = 1;
 		TrainingSetOneVariable[] trainingSet = {
 				new TrainingSetOneVariable(1,1),
 				new TrainingSetOneVariable(2,2),
@@ -21,8 +21,8 @@ public class CostFunctionTest {
 	
 	@Test
 	public void testOff() {
-		float theta0 = 1;
-		float theta1 = 3;
+		double theta0 = 1;
+		double theta1 = 3;
 		TrainingSetOneVariable[] trainingSet = {
 				new TrainingSetOneVariable(1,1), // square diff = 9
 				new TrainingSetOneVariable(2,2), // square diff = 25
